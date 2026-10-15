@@ -5,7 +5,7 @@
 <body>
 <header class="top"><div class="shell top-inner"><a href="index.html" class="logo" aria-label="PhotoPDF"><span class="mark" aria-hidden="true">▤</span> PhotoPDF</a><label class="langwrap"><span>🌐 Language</span><select id="language" aria-label="Language"><option value="ru">Русский</option><option value="en">English</option><option value="zh">简体中文</option></select></label></div></header>
 <main class="shell">
-<section class="hero"><div class="eyebrow" id="subtitle">Юридическая информация</div><h1>PhotoPDF <span style="color:var(--gold)">Legal</span></h1><p id="intro"></p></section>
+<section class="hero"><div class="eyebrow" id="subtitle">Юридическая информация</div><h1 id="appTitle">Фото и веб-страницы в PDF</h1><p id="intro"></p></section>
 <nav class="tabs" aria-label="Legal documents" role="tablist"><button class="tab" id="privacy-tab" role="tab" aria-controls="content" aria-selected="true" type="button" data-doc="privacy"></button><button class="tab" id="terms-tab" role="tab" aria-controls="content" aria-selected="false" type="button" data-doc="terms"></button><button class="tab" id="eula-tab" role="tab" aria-controls="content" aria-selected="false" type="button" data-doc="eula"></button></nav>
 <div class="toolbar"><span class="muted" id="version"></span><button class="copy" id="copy" type="button"></button></div>
 <article class="card document" id="content" role="tabpanel" tabindex="-1" aria-labelledby="privacy-tab"></article>
@@ -27,6 +27,16 @@ function render(push=false){
   document.documentElement.lang=state.lang==='zh'?'zh-CN':state.lang;
   select.value=state.lang;
   document.getElementById('subtitle').textContent=t.subtitle;
+document.getElementById('appTitle').textContent={
+  ru:'Фото и веб-страницы в PDF',
+  en:'Photo & Web to PDF',
+  zh:'图片和网页转PDF'
+}[state.lang];
+document.getElementById('appTitle').textContent={
+  ru:'Фото и веб-страницы в PDF',
+  en:'Photo & Web to PDF',
+  zh:'图片和网页转PDF'
+}[state.lang];
   document.getElementById('intro').textContent=t.intro;
   document.getElementById('version').textContent=t.version;
   document.getElementById('copy').textContent=t.copy;
