@@ -1,22 +1,21 @@
-# PhotoPDF — GitHub Pages legal pages
+# PhotoPDF — интерактивный юридический сайт
 
-Статический сайт без сборки и без внешних зависимостей.
+Одна главная страница `index.html`: переключение между политикой и условиями, выбор русского, английского и упрощённого китайского. Адаптивный интерфейс в тёмно-золотой палитре PhotoPDF.
 
-## Перед публикацией
-1. Замените `YOUR_CONTACT_EMAIL@example.com` на рабочую почту во всех HTML.
-2. Замените `[укажите имя разработчика или юридическое лицо]` и `[insert developer's legal name]`.
-3. Проверьте юридические тексты против реального release APK и требований площадки, особенно WebView/cookies, разрешения, SDK и обработку файлов.
-4. При изменениях обновите даты и текст.
+## Публикация в GitHub Pages
+1. Распакуйте ZIP и загрузите **все файлы** в корень репозитория `meledych2222-pixel/jpgPdf`.
+2. В GitHub: Settings → Pages → Deploy from a branch → main → /(root) → Save.
+3. Ссылка: https://meledych2222-pixel.github.io/jpgPdf/
+4. Прямые ссылки на вкладки:
+   - https://meledych2222-pixel.github.io/jpgPdf/#ru-privacy
+   - https://meledych2222-pixel.github.io/jpgPdf/#ru-terms
+   - https://meledych2222-pixel.github.io/jpgPdf/#en-privacy
+   - https://meledych2222-pixel.github.io/jpgPdf/#zh-privacy
 
-## Публикация
-1. Создайте публичный репозиторий GitHub, например `photopdf-legal`.
-2. Загрузите содержимое архива **в корень** репозитория.
-3. Settings → Pages → Build and deployment → Deploy from a branch → main → /(root) → Save.
-4. Ссылки будут:
-   https://YOUR_GITHUB_USERNAME.github.io/photopdf-legal/privacy.html
-   https://YOUR_GITHUB_USERNAME.github.io/photopdf-legal/terms.html
-   https://YOUR_GITHUB_USERNAME.github.io/photopdf-legal/privacy-en.html
-   https://YOUR_GITHUB_USERNAME.github.io/photopdf-legal/terms-en.html
-5. В Huawei AppGallery укажите опубликованный URL политики конфиденциальности.
+Для AppGallery рекомендуем использовать прямую отдельную HTML-страницу `privacy.html` (она также включена в архив) либо `index.html#ru-privacy`.
 
-Документы — рабочие шаблоны, не юридическое заключение.
+## Обязательно перед публикацией
+- Заменить `YOUR_CONTACT_EMAIL@example.com` и имя разработчика в `index.html` и в отдельных HTML-файлах.
+- Проверить заявления о сборе данных, WebView, SDK и OCR на фактическом release APK.
+- Удалить предупреждения «Перед публикацией» после заполнения реквизитов и проверки.
+- Это шаблоны документов, не юридическая экспертиза.
